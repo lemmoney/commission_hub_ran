@@ -7,7 +7,7 @@ module CommissionHub
 
         def call(request_params={})
           request_params = { headers: { "Authorization" => bearer_token }}.merge(request_params)
-          connection.class.get(uri, request_params)
+          connection.class.get(full_uri, request_params)
         end
 
       end
