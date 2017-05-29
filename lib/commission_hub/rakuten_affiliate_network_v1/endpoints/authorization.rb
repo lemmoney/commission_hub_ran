@@ -4,7 +4,7 @@ module CommissionHub
       class Authorization < CommissionHub::Endpoint
         
         def call(request_params)
-          connection.class.post(uri, headers: { 'Authorization' => basic_auth }, body: credentials)
+          connection.class.post(full_uri, headers: { 'Authorization' => basic_auth }, body: credentials)
         end
 
         private
